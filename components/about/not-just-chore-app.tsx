@@ -1,23 +1,27 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
+import { CheckIcon, Calendar, Coins } from "lucide-react";
 import SectionHeading from "@/components/section-heading";
+import choreImage from "@/images/bind.png";
+import slaytmini from "@/images/slaye-mini.png";
 
 const comparisons = [
   {
     gray: "Most chore apps track tasks.",
     teal: "Slayt builds habits.",
-    icon: "clipboard",
+    icon: CheckIcon,
   },
   {
     gray: "Most reward systems create entitlement.",
     teal: "Slayt links effort to growth.",
-    icon: "gift",
+    icon: Coins,
   },
   {
     gray: "Most reminders create dependence.",
     teal: "Slayt reduces reminders over time.",
-    icon: "bell",
+    icon: Calendar,
   },
 ];
 
@@ -40,24 +44,20 @@ export default function NotJustChoreApp() {
               transition={{ duration: 0.4, delay: i * 0.1 }}
               className="text-center"
             >
-              <p className="text-sm text-muted-foreground mb-3">{c.gray}</p>
-              <div className="inline-flex items-center gap-2 rounded-full bg-teal px-4 py-2">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M8 1L2 5v6l6 4 6-4V5L8 1z" fill="white" />
-                  <path
-                    d="M5.5 8l2 2 3-3.5"
-                    stroke="hsl(174, 100%, 35%)"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                <span className="text-xs font-semibold text-background">
+              <p className="flex justify-center items-center gap-2 w-full text-md text-muted-foreground mb-2">
+                {<c.icon />} {c.gray}
+              </p>
+              <div className="inline-flex items-center justify-center gap-2 rounded-b-3xl bg-teal px-4 py-2 w-full">
+                <Image src={slaytmini} alt={"chore image alt"} />
+                <span className="text-md font-semibold text-navy">
                   {c.teal}
                 </span>
               </div>
             </motion.div>
           ))}
+        </div>
+        <div className="flex justify-center items-center">
+          <Image className="mx-auto" src={choreImage} alt={"chore image alt"} />
         </div>
       </div>
     </section>

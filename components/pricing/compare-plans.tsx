@@ -14,8 +14,8 @@ const rows = [
 
 export default function ComparePlans() {
   return (
-    <section className="bg-background py-16 px-6">
-      <div className="mx-auto max-w-6xl">
+    <section className="bg-background py-24 px-6">
+      <div className="mx-auto max-w-7xl">
         <SectionHeading
           title="Compare Future-Proof"
           subtitle="Slayt focuses on three key behaviours:"
@@ -26,44 +26,60 @@ export default function ComparePlans() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mx-auto mt-14 max-w-lg overflow-hidden rounded-2xl bg-background shadow-md"
+          className="mt-20 flex justify-center items-stretched"
         >
-          {/* Header */}
-          <div className="grid grid-cols-3 gap-4 px-6 py-4">
-            <span className="text-sm font-bold text-navy">Features</span>
-            <div className="text-center">
-              <p className="text-sm font-bold text-navy">Free plan</p>
-              <p className="text-xs text-muted-foreground">$0 / forever</p>
-            </div>
-            <div className="text-center">
-              <p className="text-sm font-bold text-navy">Pro plan</p>
-              <span className="inline-block rounded-[0.5rem] bg-teal px-3 py-0.5 text-xs font-semibold text-navy">
-                Coming soon
-              </span>
+          {/* LEFT — Features Column */}
+          <div className="bg-muted/30 px-12 py-14">
+            <h3 className="text-xl font-bold text-navy mb-12 h-20">Features</h3>
+
+            <div className="space-y-12">
+              {rows.map((row) => (
+                <p key={row.feature} className="text-xl text-muted-foreground">
+                  {row.feature}
+                </p>
+              ))}
             </div>
           </div>
 
-          {/* Rows */}
-          {rows.map((row, i) => (
-            <div
-              key={row.feature}
-              className={`grid grid-cols-3 gap-4 px-6 py-4 ${i < rows.length - 1 ? "border-b border-border" : ""}`}
-            >
-              <span className="text-sm text-muted-foreground">
-                {row.feature}
-              </span>
-              <span className="flex justify-center">
-                {row.free ? (
-                  <Check size={18} className="text-blue" />
-                ) : (
-                  <X size={18} className="text-destructive" />
-                )}
-              </span>
-              <span className="flex justify-center">
-                <Check size={18} className="text-blue" />
-              </span>
+          {/* MIDDLE — Free Plan (Highlighted) */}
+          <div className="relative bg-white px-12 py-14 shadow-lg">
+            <div className="absolute top-0 left-0 h-1 w-full bg-blue" />
+
+            <div className="text-center mb-14">
+              <h3 className="text-xl font-bold text-navy">Free plan</h3>
+              <p className="mt-3 text-xl font-bold text-navy">$0 / forever</p>
             </div>
-          ))}
+
+            <div className="space-y-12 flex flex-col items-center">
+              {rows.map((row) =>
+                row.free ? (
+                  <Check key={row.feature} size={26} className="text-blue" />
+                ) : (
+                  <X key={row.feature} size={26} className="text-destructive" />
+                ),
+              )}
+            </div>
+          </div>
+
+          {/* RIGHT — Pro Plan */}
+          <div className="bg-muted/20 px-12 py-14">
+            <div className="text-center mb-12">
+              <h3 className="text-xl font-bold text-navy">Pro plan</h3>
+              <div className="bg-teal px-8 py-2 text-xl font-bold text-navy">
+                Coming soon
+              </div>
+            </div>
+
+            <div className="space-y-12 flex flex-col items-center">
+              {rows.map((row) =>
+                row.pro ? (
+                  <Check key={row.feature} size={26} className="text-blue" />
+                ) : (
+                  <X key={row.feature} size={26} className="text-destructive" />
+                ),
+              )}
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -3,7 +3,6 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Send } from "lucide-react";
 import CTASection from "@/components/cta-section";
 
 export default function ContactPage() {
