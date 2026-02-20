@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/images/logo.png";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Mail, Phone } from "lucide-react";
 
 import Apple from "@/images/apple.png";
 import Google from "@/images/google.png";
