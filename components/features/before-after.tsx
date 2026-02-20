@@ -71,7 +71,7 @@ export default function BeforeAfter() {
               alt="arrow"
               width={120}
               height={80}
-              className="rotate-90 md:rotate-0 w-[14rem] h-auto drop-shadow-2xl absolute top-[-1.5rem] right-[30rem]"
+              className="rotate-90 md:rotate-0 w-[15rem] h-auto drop-shadow-2xl absolute top-[-1.3rem] right-[30rem]"
             />
           </motion.div>
           {/* Arrow - Mobile */}
