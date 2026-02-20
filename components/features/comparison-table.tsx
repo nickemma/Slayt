@@ -79,7 +79,7 @@ export default function ComparisonTable() {
                 {row.others === false ? (
                   <X size={18} className="text-red-500" />
                 ) : (
-                  <span className="text-sm text-muted-foreground">
+                  <span className="text-sm text-muted_foreground">
                     {row.others}
                   </span>
                 )}

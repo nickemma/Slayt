@@ -94,14 +94,14 @@ export default function Testimonials() {
         <div className="mt-8 flex items-center justify-center gap-4">
           <button
             onClick={() => setPage(Math.max(0, page - 1))}
-            className="flex h-8 w-8 items-center justify-center text-muted-foreground hover:text-teal transition-colors"
+            className="flex h-8 w-8 items-center justify-center text-muted_foreground hover:text-teal transition-colors"
             aria-label="Previous testimonials"
           >
             <ChevronLeft size={16} />
           </button>
           <button
             onClick={() => setPage(page + 1)}
-            className="flex h-8 w-8 items-center justify-center text-muted-foreground hover:text-teal transition-colors"
+            className="flex h-8 w-8 items-center justify-center text-muted_foreground hover:text-teal transition-colors"
             aria-label="Next testimonials"
           >
             <ChevronRight size={16} />

@@ -27,7 +27,7 @@ export default function FreePlan() {
           <div className="rounded-2xl bg-background p-8 shadow-md">
             <h3 className="font-bold text-navy">
               $0{" "}
-              <span className="text-lg font-medium text-muted-foreground">
+              <span className="text-lg font-medium text-muted_foreground">
                 / forever
               </span>
             </h3>

@@ -84,7 +84,7 @@ export default function FeatureBlocks() {
                   {block.features.map((f) => (
                     <li
                       key={f}
-                      className="flex items-center gap-3 text-base text-muted-foreground"
+                      className="flex items-center gap-3 text-base text-muted_foreground"
                     >
                       <CheckCircle2 size={20} className="text-blue shrink-0" />{" "}
                       {f}

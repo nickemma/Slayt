@@ -36,11 +36,11 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-1.5 mb-4">
               <Image src={Logo} alt="logo image" priority />
             </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+            <p className="text-sm text-muted_foreground leading-relaxed mb-6">
               Slayt helps parents raise responsible, confident kids without
               shouting, chasing or daily stress
             </p>
-            <p className="text-xs text-muted-foreground mb-4">
+            <p className="text-xs text-muted_foreground mb-4">
               Join the 500+ families who signed up today
             </p>
             <div className="flex gap-3">
@@ -67,7 +67,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-sm text-muted-foreground hover:text-blue transition-colors"
+                    className="text-sm text-muted_foreground hover:text-blue transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -84,7 +84,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-sm text-muted-foreground hover:text-blue transition-colors"
+                    className="text-sm text-muted_foreground hover:text-blue transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -97,19 +97,19 @@ export default function Footer() {
           <div>
             <h4 className="mb-4 text-sm font-bold text-navy">Contact</h4>
             <ul className="flex flex-col gap-4">
-              <li className="flex items-start gap-2 text-sm text-muted-foreground">
+              <li className="flex items-start gap-2 text-sm text-muted_foreground">
                 <MapPin
                   size={16}
-                  className="mt-0.5 shrink-0 text-muted-foreground"
+                  className="mt-0.5 shrink-0 text-muted_foreground"
                 />
                 <span>624 Hamilton Crescent, Milton, Ontario, Canada</span>
               </li>
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Phone size={16} className="shrink-0 text-muted-foreground" />
+              <li className="flex items-center gap-2 text-sm text-muted_foreground">
+                <Phone size={16} className="shrink-0 text-muted_foreground" />
                 <span>+16473666979</span>
               </li>
-              <li className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Mail size={16} className="shrink-0 text-muted-foreground" />
+              <li className="flex items-center gap-2 text-sm text-muted_foreground">
+                <Mail size={16} className="shrink-0 text-muted_foreground" />
                 <span>info@slayt.co</span>
               </li>
             </ul>
@@ -124,7 +124,7 @@ export default function Footer() {
             <div className="flex items-center gap-4">
               <button
                 onClick={scrollToTop}
-                className="text-sm text-muted-foreground hover:text-blue transition-colors flex items-center gap-2"
+                className="text-sm text-muted_foreground hover:text-blue transition-colors flex items-center gap-2"
               >
                 Back to top
                 <span className="flex h-6 w-6 items-center justify-center rounded-full border border-border text-xs">
@@ -132,7 +132,7 @@ export default function Footer() {
                 </span>
               </button>
             </div>
-            <p className="mt-2 hidden text-xs text-muted-foreground sm:block">
+            <p className="mt-2 hidden text-xs text-muted_foreground sm:block">
               &copy; 2026 Slayt. All Rights Reserved.
             </p>
           </div>
@@ -159,7 +159,7 @@ export default function Footer() {
               <a
                 key={label}
                 href="#"
-                className="text-muted-foreground hover:text-blue transition-colors border rounded-full py-2 px-2"
+                className="text-muted_foreground hover:text-blue transition-colors border rounded-full py-2 px-2"
                 aria-label={label}
               >
                 <svg
