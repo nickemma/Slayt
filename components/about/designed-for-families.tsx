@@ -31,7 +31,7 @@ export default function DesignedForFamilies() {
             {items.map((item) => (
               <li
                 key={item}
-                className="flex items-center gap-3 text-sm text-muted-foreground"
+                className="flex items-center gap-3 text-muted_foreground"
               >
                 <CheckCircle2 size={16} className="text-blue shrink-0" />
                 {item}

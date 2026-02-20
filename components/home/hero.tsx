@@ -5,10 +5,10 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Play, CheckCircle2 } from "lucide-react";
 
-import heroImage from "@/images/hero-mom-kid.jpg";
-import kid1 from "@/images/kid-chores-1.jpg";
-import kid2 from "@/images/kid-chores-2.jpg";
-import kid3 from "@/images/kid-chores-3.jpg";
+import heroImage from "@/images/hero-kid-mom.png";
+import kid1 from "@/images/kid-chores-1.png";
+import kid2 from "@/images/kid-chores-2.png";
+import kid3 from "@/images/kid-chores-3.png";
 
 import Vector from "@/images/Vector.png";
 
@@ -54,13 +54,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl font-extrabold leading-tight text-navy md:text-5xl lg:text-6xl text-balance"
+            className="font-bold text-navy text-balance"
           >
             Stop arguing about chores. <br className="hidden md:block" />
             Start raising{" "}
-            <span className="font-serif italic text-blue">
-              responsible kids
-            </span>{" "}
+            <span className="font-smooch text-blue">responsible kids</span>{" "}
             &mdash; without reminders.
           </motion.h1>
 
@@ -68,7 +66,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="mx-auto mt-6 max-w-lg text-sm text-muted-foreground leading-relaxed md:text-base"
+            className="mx-auto mt-6 max-w-lg text-muted_foreground"
           >
             Slayt turns daily battles into habits kids actually follow. <br />{" "}
             Most parents see changes in the first 7 days.
@@ -95,17 +93,17 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.45 }}
-            className="mt-6 flex flex-wrap items-center justify-center gap-2 text-xs text-muted-foreground"
+            className="mt-6 flex flex-wrap items-center justify-center gap-2 text-xs text-muted_foreground"
           >
-            <span className="flex items-center gap-1.5 text-muted-foreground">
+            <span className="flex items-center gap-1.5 text-muted_foreground">
               <CheckCircle2 size={14} className="text-navy" />
               No credit card
             </span>
-            <span className="flex items-center gap-1.5 text-muted-foreground">
+            <span className="flex items-center gap-1.5 text-muted_foreground">
               <CheckCircle2 size={14} className="text-navy" />
               {"Works for ages 4\u201312"}
             </span>
-            <span className="flex items-center gap-1.5 text-muted-foreground">
+            <span className="flex items-center gap-1.5 text-muted_foreground">
               <CheckCircle2 size={14} className="text-navy" />
               Parent approved
             </span>

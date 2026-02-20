@@ -4,8 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import SectionHeading from "@/components/section-heading";
-import iphoneImg from "@/images/iPhone.png";
-import ellipseImg from "@/images/Ellipse-iphone.png";
+import bind from "@/images/bind.png";
 
 const metrics = [
   { label: "Reliability", score: 4.1, color: "bg-orange-400" },
@@ -54,8 +53,8 @@ const getStarFills = (rating: number): ("full" | "half" | "empty")[] =>
 
 export default function AppPreview() {
   return (
-    <section className="bg-background py-16 px-6">
-      <div className="mx-auto max-w-6xl">
+    <section className="pt-20 px-6 overflow-hidden">
+      <div className="mx-auto max-w-6xl mb-20">
         <SectionHeading
           title="App Preview"
           subtitle="Used daily by real families who wanted less stress"
@@ -81,7 +80,7 @@ export default function AppPreview() {
                     <StarIcon key={i} fill={fill} index={i} />
                   ))}
                 </div>
-                <p className="mt-1.5 text-xs text-muted-foreground">
+                <p className="mt-1.5 text-muted_foreground">
                   Based on 563 ratings
                 </p>
               </div>
@@ -119,9 +118,9 @@ export default function AppPreview() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex flex-col justify-center pt-4"
+            className="flex flex-col bg-red-500justify-center items-center text-center md:items-start md:text-left"
           >
-            <h3 className="text-base font-bold text-navy mb-5">
+            <h3 className="font-bold text-navy mb-1 md:whitespace-nowrap">
               This is what calm parenting looks like.
             </h3>
             <ul className="space-y-4">
@@ -132,7 +131,7 @@ export default function AppPreview() {
               ].map((item) => (
                 <li
                   key={item}
-                  className="flex items-center gap-2 text-sm text-muted-foreground"
+                  className="flex items-center gap-2 text-md text-muted_foreground"
                 >
                   <CheckCircle2 size={16} className="text-navy shrink-0" />
                   {item}
@@ -147,30 +146,13 @@ export default function AppPreview() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="relative flex justify-center items-end"
+            className="overflow-visible mt-12 -mr-6 -mb-20 -ml-10 md:-ml-6 md:mt-[10.2rem] md:-mr-0 md:-mb-24"
           >
-            {/* Blue arch/ellipse behind the phone */}
-            {/* Ellipse */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[46rem] h-[16.6rem]">
-              <Image
-                src={ellipseImg}
-                alt=""
-                width={746}
-                height={373}
-                className="w-full"
-              />
-            </div>
-
-            {/* Phone */}
-            <div className="relative z-10">
-              <Image
-                src={iphoneImg}
-                alt="Slayt app preview"
-                width={746}
-                height={375}
-                className="w-full h-[28rem] drop-shadow-2xl"
-              />
-            </div>
+            <Image
+              src={bind}
+              alt="Slayt app preview"
+              className="w-full h-auto object-contain scale-125 origin-bottom md:scale-150 md:origin-bottom"
+            />
           </motion.div>
         </div>
       </div>

@@ -9,17 +9,15 @@ export default function ContactPage() {
   return (
     <main>
       <Navbar />
-      <section className="bg-background px-6 py-16 md:py-24">
+      <section className="px-6 py-20 md:py-24">
         <div className="mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-3xl font-extrabold leading-tight text-navy md:text-5xl lg:text-6xl">
-              Contact
-            </h1>
-            <p className="mt-4 max-w-lg text-sm text-muted-foreground leading-relaxed md:text-base">
+            <h1 className="font-bold text-navy">Contact</h1>
+            <p className="mt-4 max-w-lg text-muted_foreground ">
               Slayt is built to support children &mdash; not exploit them
             </p>
           </motion.div>

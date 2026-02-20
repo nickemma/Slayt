@@ -20,14 +20,14 @@ export default function CTASection({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="mx-auto max-w-2xl text-center"
+        className="mx-auto text-center"
       >
-        <h2 className="text-3xl font-bold text-navy text-balance">{heading}</h2>
-        <p className="mt-4 text-sm font-medium text-navy/80">{subtitle}</p>
+        <h2 className="font-bold text-navy">{heading}</h2>
+        <p className="mt-4 font-medium text-navy/80">{subtitle}</p>
         <button className="mt-4 rounded-[0.5rem] bg-background px-10 py-3 text-sm font-semibold text-navy shadow-lg transition-transform hover:scale-105">
           Start Free
         </button>
-        <p className="mt-4 text-xs text-navy/70">{note}</p>
+        <p className="mt-4 text-navy/70">{note}</p>
       </motion.div>
     </section>
   );

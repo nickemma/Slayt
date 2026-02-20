@@ -39,9 +39,7 @@ export default function OurBelief() {
           className="flex items-center justify-center gap-3 mb-4"
         >
           <Image src={star} alt="logo image" priority />
-          <h2 className="text-2xl font-bold text-navy md:text-3xl">
-            Our belief is simple.
-          </h2>
+          <h2 className="font-bold text-navy">Our belief is simple.</h2>
           <Image src={star} alt="logo image" priority />
         </motion.div>
 
@@ -64,10 +62,8 @@ export default function OurBelief() {
                 />
               </div>
               <div className="p-5">
-                <h3 className="text-base font-bold text-navy">
-                  {belief.title}
-                </h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                <h3 className="font-bold text-navy">{belief.title}</h3>
+                <p className="mt-2 text-muted_foreground">
                   {belief.description}
                 </p>
               </div>

@@ -38,7 +38,7 @@ export default function FAQ() {
 
   return (
     <section className="bg-background py-20 px-6">
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-5xl">
         <SectionHeading
           title="Frequently asked questions"
           subtitle={
@@ -47,9 +47,7 @@ export default function FAQ() {
         />
 
         <div className="mt-14 space-y-0">
-          <h2 className="mb-4 text-2xl font-bold text-navy">
-            Most important question
-          </h2>
+          <h2 className="mb-4 font-bold text-navy">Most important question</h2>
           {faqs.map((faq, i) => (
             <div key={faq.question}>
               <button
@@ -62,7 +60,7 @@ export default function FAQ() {
                     <span className="mt-0.5 h-full w-1 shrink-0 rounded-full bg-blue" />
                   )}
                   <span
-                    className={`text-sm font-semibold ${openIndex === i ? "text-navy" : "text-navy/80"}`}
+                    className={`text-lg font-semibold ${openIndex === i ? "text-navy" : "text-navy/80"}`}
                   >
                     {faq.question}
                   </span>
@@ -80,7 +78,7 @@ export default function FAQ() {
                     transition={{ duration: 0.2 }}
                     className="overflow-hidden"
                   >
-                    <p className="pb-5 pl-4 text-sm text-muted-foreground leading-relaxed">
+                    <p className="pb-5 pl-4 text-muted_foreground ">
                       {faq.answer}
                     </p>
                   </motion.div>

@@ -43,7 +43,7 @@ export default function FamiliesSeeing() {
                 />
               ))}
             </div>
-            <span className="text-xs text-muted-foreground">
+            <span className="text-sm text-muted_foreground">
               Based on 563 ratings
             </span>
           </div>
@@ -59,12 +59,10 @@ export default function FamiliesSeeing() {
               transition={{ duration: 0.4, delay: i * 0.1 }}
               className="rounded-2xl border border-border p-6"
             >
-              <div className="mb-1 text-6xl font-serif text-muted-foreground/30 text-center">
+              <div className="mb-1 text-6xl font-serif text-muted_foreground/30 text-center">
                 {"\u201C"}
               </div>
-              <p className="text-sm font-medium text-navy leading-relaxed">
-                {t.quote}
-              </p>
+              <p className="font-medium text-navy">{t.quote}</p>
               <p className="mt-3 text-sm font-bold text-teal">{t.name}</p>
               <div className="mt-2 flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, si) => (
@@ -86,14 +84,14 @@ export default function FamiliesSeeing() {
         <div className="mt-8 flex items-center justify-center gap-4">
           <button
             onClick={() => setPage(Math.max(0, page - 1))}
-            className="flex h-8 w-8 items-center justify-center text-muted-foreground hover:text-teal transition-colors"
+            className="flex h-8 w-8 items-center justify-center text-muted_foreground hover:text-teal transition-colors"
             aria-label="Previous testimonials"
           >
             <ChevronLeft size={16} />
           </button>
           <button
             onClick={() => setPage(page + 1)}
-            className="flex h-8 w-8 items-center justify-center text-muted-foreground hover:text-teal transition-colors"
+            className="flex h-8 w-8 items-center justify-center text-muted_foreground hover:text-teal transition-colors"
             aria-label="Next testimonials"
           >
             <ChevronRight size={16} />

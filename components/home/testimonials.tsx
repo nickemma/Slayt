@@ -58,7 +58,7 @@ export default function Testimonials() {
   const [page, setPage] = useState(0);
 
   return (
-    <section className="bg-secondary py-20 px-6">
+    <section className="px-6">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           title="Why Parents Love Slayt"
@@ -75,13 +75,11 @@ export default function Testimonials() {
               transition={{ duration: 0.4, delay: i * 0.1 }}
               className="rounded-2xl border border-border p-6"
             >
-              <div className="mb-1 text-6xl font-serif text-muted-foreground/30 text-center">
+              <div className="mb-1 text-6xl font-serif text-muted_foreground/30 text-center">
                 {"\u201C"}
               </div>
-              <p className="text-sm font-medium text-navy leading-relaxed">
-                {t.quote}
-              </p>
-              <p className="mt-3 text-sm font-bold text-teal">{t.name}</p>
+              <p className="font-medium text-navy">{t.quote}</p>
+              <p className="mt-3 font-bold text-teal">{t.name}</p>
               <div className="mt-2 flex gap-0.5">
                 <div className="mt-2 flex gap-0.5">
                   {getStarFills(t.stars).map((fill, si) => (

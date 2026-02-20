@@ -12,11 +12,11 @@ export default function FeaturesHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-3xl font-extrabold leading-tight text-navy md:text-5xl lg:text-6xl">
+          <h1 className="font-bold text-navy">
             Raise responsible kids &mdash; <br className="hidden md:block" />
             <span className="text-blue">without daily battles.</span>
           </h1>
-          <p className="mt-4 max-w-lg text-sm text-muted-foreground leading-relaxed md:text-base">
+          <p className="mt-4 max-w-lg text-muted_foreground ">
             Slayt turns chores into habits kids actually follow.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">

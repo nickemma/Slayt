@@ -21,7 +21,7 @@ const missionItems = [
 export default function PrivacyAndMission() {
   return (
     <>
-      <section className="bg-background py-16 px-6">
+      <section className="py-20 px-6">
         <div className="mx-auto max-w-6xl">
           <SectionHeading
             title="Built with care and privacy in mind."
@@ -38,7 +38,7 @@ export default function PrivacyAndMission() {
               {privacyItems.map((item) => (
                 <li
                   key={item}
-                  className="flex items-center gap-3 text-sm text-muted-foreground"
+                  className="flex items-center gap-3 text-md text-muted_foreground"
                 >
                   <CheckCircle2 size={16} className="text-blue shrink-0" />
                   {item}
@@ -49,7 +49,7 @@ export default function PrivacyAndMission() {
         </div>
       </section>
 
-      <section className="bg-background py-16 px-6">
+      <section className="bg-background py-20 px-6">
         <div className="mx-auto max-w-6xl">
           <SectionHeading
             title={"We\u2019re building more than an app."}
@@ -66,7 +66,7 @@ export default function PrivacyAndMission() {
               {missionItems.map((item) => (
                 <li
                   key={item}
-                  className="flex items-center gap-3 text-sm text-muted-foreground"
+                  className="flex items-center gap-3 text-md text-muted_foreground"
                 >
                   <CheckCircle2 size={16} className="text-blue shrink-0" />
                   {item}

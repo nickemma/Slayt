@@ -68,7 +68,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className={`block text-sm font-medium transition-colors hover:text-blue ${
+                    className={`block text-md font-medium transition-colors hover:text-blue ${
                       pathname === link.href ? "text-blue" : "text-navy"
                     }`}
                   >

@@ -44,8 +44,8 @@ export default function HabitPsychology() {
               <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#E0F4FF] text-navy">
                 <pillar.icon size={20} />
               </div>
-              <h3 className="text-base font-bold text-navy">{pillar.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+              <h3 className="font-bold text-navy">{pillar.title}</h3>
+              <p className="mt-2 text-muted_foreground leading-relaxed">
                 {pillar.description}
               </p>
             </motion.div>
@@ -57,7 +57,7 @@ export default function HabitPsychology() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-8 text-center text-2xl font-bold text-navy"
+          className="mt-8 text-center font-bold text-navy"
         >
           Responsibility becomes automatic.
         </motion.p>

@@ -32,24 +32,30 @@ export default function PainPoints() {
           subtitle="Slayt helps parents build responsibility through tasks, rewards, and consistency"
         />
 
-        <div className="mt-14 grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border">
+        <div className="mt-14 grid md:grid-cols-3">
           {cards.map((card, i) => (
-            <motion.div
-              key={card.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="p-6 md:px-8 mx-2 group cursor-pointer transition-all duration-300 hover:shadow hover:bg-white hover:rounded-sm"
-            >
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#E0F4FF] text-navy transition-all duration-300">
-                <card.icon size={20} />
-              </div>
-              <h3 className="text-base font-bold text-navy">{card.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                {card.description}
-              </p>
-            </motion.div>
+            <div key={card.title} className="flex flex-1">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                className="flex-1 p-6 md:px-8 mx-2 group cursor-pointer transition-all duration-300 hover:shadow hover:bg-white hover:rounded-sm"
+              >
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#E0F4FF] text-navy transition-all duration-300">
+                  <card.icon size={20} />
+                </div>
+                <h3 className="font-normal text-navy">{card.title}</h3>
+                <p className="mt-2 text-muted_foreground">{card.description}</p>
+              </motion.div>
+
+              {/* Half-height divider between cards, not after last */}
+              {i < cards.length - 1 && (
+                <div className="hidden md:flex items-center">
+                  <div className="h-1/2 w-px bg-border" />
+                </div>
+              )}
+            </div>
           ))}
         </div>
       </div>

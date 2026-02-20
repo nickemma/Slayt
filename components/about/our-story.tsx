@@ -28,14 +28,14 @@ export default function OurStory() {
                 <path d="M12 2L2 8v8l10 6 10-6V8L12 2z" />
               </svg>
             </div>
-            <h2 className="text-2xl font-bold text-navy md:text-3xl text-balance">
+            <h2 className="font-bold text-navy text-balance">
               It started with the same frustration you feel.
             </h2>
-            <p className="mt-4 max-w-md text-sm text-muted-foreground leading-relaxed">
+            <p className="mt-4 max-w-md text-muted_foreground">
               Slayt helps children check tasks themselves, track streaks, and
               earn rewards without being chased.
             </p>
-            <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
+            <ul className="mt-6 space-y-2 text-md text-muted_foreground">
               <li>{"- You repeat yourself."}</li>
               <li>{"- You remind."}</li>
               <li>{"- You negotiate."}</li>
@@ -43,19 +43,19 @@ export default function OurStory() {
                 {"- You raise your voice \u2014 and feel bad about it later."}
               </li>
             </ul>
-            <p className="mt-6 text-sm text-muted-foreground">
+            <p className="mt-6 text-muted_foreground">
               We experienced the same cycle.
             </p>
-            <p className="mt-3 text-sm text-muted-foreground">
+            <p className="mt-3 text-muted_foreground">
               {"We didn\u2019t want a louder system."}
               <br />
               We wanted a smarter one.
             </p>
-            <p className="mt-6 text-sm font-bold text-navy">
+            <p className="mt-6 font-bold text-navy">
               So we built Slayt &mdash; a way to turn daily battles into
               consistent habits.
             </p>
-            <ul className="mt-4 space-y-1 text-sm text-muted-foreground">
+            <ul className="mt-4 space-y-1 text-md text-muted_foreground">
               <li>{"- Not through pressure."}</li>
               <li>{"- Not through fear."}</li>
               <li>{"- But through structure and ownership."}</li>

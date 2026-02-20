@@ -8,6 +8,10 @@
   }
 }
 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", system-ui, sans-serif;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -21,7 +25,7 @@
     --secondary: 180 30% 96%;
     --secondary-foreground: 200 40% 16%;
     --muted: 210 20% 96%;
-    --muted-foreground: 202, 5%, 50%, 1;
+    /* --muted-foreground: 202, 5%, 50%, 1; */
     --accent: 174 100% 35%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
@@ -35,9 +39,6 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.625rem;
-    --teal: 170, 77%, 55%, 1;
-    --navy: 201, 100%, 17%, 1;
-    --blue: 203 93% 51%;
     --light-teal: 200 50% 96%;
     --cyan: 203 93% 51%;
   }
@@ -50,6 +51,40 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  /* subheadings */
+  h2{
+    font-size: 40px;
+    line-height: 72px;
+    letter-spacing: -0.04em;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 72px;
+    letter-spacing: -0.04em;
+  }
+
+  /* hero h1 - desktop */
+  h1 {
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: -0.04em;
+  }
+
+  /* hero h1 - mobile */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 40px;
+      line-height: 45px;
+      letter-spacing: -0.04em;
+    }
+    h2, h3, h4 {
+      line-height: 45px;
+    }
   }
 }
 

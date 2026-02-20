@@ -14,7 +14,7 @@ const features = [
 
 export default function FreePlan() {
   return (
-    <section className="bg-background px-6 pb-20">
+    <section className="px-6 pb-20">
       <div className="mx-auto max-w-6xl">
         <div className="border-t border-border pt-16" />
         <motion.div
@@ -25,18 +25,18 @@ export default function FreePlan() {
           className="max-w-sm"
         >
           <div className="rounded-2xl bg-background p-8 shadow-md">
-            <h3 className="text-3xl font-extrabold text-navy">
+            <h3 className="font-bold text-navy">
               $0{" "}
               <span className="text-lg font-medium text-muted-foreground">
                 / forever
               </span>
             </h3>
-            <p className="mt-4 text-sm font-bold text-navy">What you get:</p>
+            <p className="mt-4 font-bold text-navy">What you get:</p>
             <ul className="mt-4 space-y-3">
               {features.map((f) => (
                 <li
                   key={f}
-                  className="flex items-center gap-2 text-sm text-muted-foreground"
+                  className="flex items-center gap-2 text-md text-muted_foreground"
                 >
                   <CheckCircle2 size={16} className="text-blue shrink-0" />
                   {f}
@@ -46,7 +46,7 @@ export default function FreePlan() {
             <button className="mt-8 flex w-full items-center justify-center gap-2 rounded-[0.5rem] bg-blue px-6 py-3 text-sm font-semibold text-background shadow-lg transition-transform hover:scale-105">
               Start Free <ArrowRight size={16} />
             </button>
-            <p className="mt-3 text-center text-xs text-muted-foreground">
+            <p className="mt-3 text-center text-muted_foreground">
               Cancel anytime. No pressure.
             </p>
           </div>

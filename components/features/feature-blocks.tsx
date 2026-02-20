@@ -62,10 +62,10 @@ export default function FeatureBlocks() {
         <section key={block.title} className={`${block.bgClass} py-20 px-6`}>
           <div className="mx-auto max-w-6xl">
             <div className="text-center mb-4">
-              <h2 className="text-3xl text-center font-bold text-navy md:text-4xl text-balance">
+              <h2 className="text-center font-bold text-navy text-balance">
                 {block.title}
               </h2>
-              <p className="mt-3 mx-auto max-w-md text-sm text-muted-foreground leading-relaxed">
+              <p className="mt-3 mx-auto max-w-md text-muted_foreground ">
                 {block.subtitle}
               </p>
             </div>
@@ -111,7 +111,7 @@ export default function FeatureBlocks() {
                     alt={block.title}
                     width={384}
                     height={768}
-                    className="w-full h-[25rem]"
+                    className="w-full h-auto drop-shadow-2xl"
                   />
                 </div>
               </motion.div>
