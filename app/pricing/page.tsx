@@ -25,6 +25,7 @@ export default function PricingPage() {
       <CTASection
         heading="Start building better habits today."
         subtitle="Start free. No credit card. See changes in 7 days."
+        note="Cancel anytime. No pressure. Just peace."
       />
       <Footer />
     </main>

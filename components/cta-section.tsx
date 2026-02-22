@@ -11,7 +11,7 @@ interface CTASectionProps {
 export default function CTASection({
   heading,
   subtitle,
-  note = "Cancel anytime. No pressure. Just peace.",
+  note,
 }: CTASectionProps) {
   return (
     <section className="bg-teal py-20 px-6">
@@ -27,7 +27,7 @@ export default function CTASection({
         <button className="mt-4 rounded-[0.5rem] bg-background px-10 py-3 text-sm font-semibold text-navy shadow-lg transition-transform hover:scale-105">
           Start Free
         </button>
-        <p className="mt-4 text-navy/70">{note}</p>
+        <p className="mt-4 text-navy/70 font-medium">{note}</p>
       </motion.div>
     </section>
   );

@@ -29,6 +29,7 @@ export default function AboutPage() {
       <CTASection
         heading="Ready to try a calmer way?"
         subtitle="Start free. No credit card. See changes in 7 days."
+        note="Cancel anytime. No pressure. Just peace."
       />
       <Footer />
     </main>

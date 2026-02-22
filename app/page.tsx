@@ -19,6 +19,7 @@ export default function Page() {
       <CTASection
         heading="Start your calm parenting journey today."
         subtitle="Most families notice changes within 7 days."
+        note="Cancel anytime. No pressure. Just peace."
       />
       <Footer />
     </main>

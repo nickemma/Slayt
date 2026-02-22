@@ -27,6 +27,7 @@ export default function FeaturesPage() {
       <CTASection
         heading="Stop arguing about chores."
         subtitle="Start free. No credit card. See changes in 7 days."
+        note="Cancel anytime. No pressure. Just peace."
       />
       <Footer />
     </main>

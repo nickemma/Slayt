@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Logo from "@/images/logo.png";
 import { MapPin, Mail, Phone } from "lucide-react";
@@ -8,21 +9,45 @@ import { MapPin, Mail, Phone } from "lucide-react";
 import Apple from "@/images/apple.png";
 import Google from "@/images/google.png";
 
+const APP_STORE_URL =
+  "https://apps.apple.com/ng/app/slayt-closer-together/id6470950940";
+const PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=com.slayt&hl=en";
+
 const whySlayt = [
   { label: "About us", href: "/about" },
   { label: "Pricing", href: "/pricing" },
   { label: "Features", href: "/features" },
-  { label: "Tasks and Rewards", href: "#" },
+  { label: "Tasks and Rewards", href: "/tasks-and-rewards" },
 ];
 
 const support = [
-  { label: "Accessibility", href: "#" },
-  { label: "Terms and Conditions", href: "#" },
-  { label: "FAQs", href: "#" },
-  { label: "Privacy Policy", href: "#" },
+  { label: "Accessibility", href: "/accessibility" },
+  { label: "Terms and Conditions", href: "/terms" },
+  { label: "FAQs", href: "/faq" },
+  { label: "Privacy Policy", href: "/privacy" },
 ];
 
+function useDeviceOS() {
+  const [os, setOs] = useState<"ios" | "android" | "other">("other");
+
+  useEffect(() => {
+    const ua = navigator.userAgent;
+    if (/iphone|ipad|ipod/i.test(ua)) {
+      setOs("ios");
+    } else if (/android/i.test(ua)) {
+      setOs("android");
+    } else {
+      setOs("other");
+    }
+  }, []);
+
+  return os;
+}
+
 export default function Footer() {
+  const os = useDeviceOS();
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -44,18 +69,34 @@ export default function Footer() {
               Join the 500+ families who signed up today
             </p>
             <div className="flex gap-3">
-              <Image
-                src={Apple}
-                alt="Download on the App store"
-                priority
-                className="w-[130px] h-[40px]"
-              />
-              <Image
-                src={Google}
-                alt="Download on the google store"
-                priority
-                className="w-[130px] h-[40px]"
-              />
+              {os !== "android" && (
+                <a
+                  href={APP_STORE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={Apple}
+                    alt="Download on the App Store"
+                    priority
+                    className="w-[130px] h-[40px]"
+                  />
+                </a>
+              )}
+              {os !== "ios" && (
+                <a
+                  href={PLAY_STORE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={Google}
+                    alt="Get it on Google Play"
+                    priority
+                    className="w-[130px] h-[40px]"
+                  />
+                </a>
+              )}
             </div>
           </div>
 

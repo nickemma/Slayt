@@ -222,7 +222,7 @@ export default function HowItWorks() {
           >
             <path
               d="M 50 20 C 70 80, 30 150, 50 280"
-              stroke="#798185"
+              stroke="#F5F5F5"
               strokeWidth="1"
               strokeLinecap="round"
               opacity="0.4"
@@ -255,41 +255,35 @@ export default function HowItWorks() {
             <div key={step} className="relative flex items-center py-10">
               {/* Badge centered on the line */}
               <div className="absolute left-1/2 -translate-x-1/2 z-10">
-                <div
-                  className={`flex h-9 w-9 items-center justify-center rounded-full shadow transition-all duration-500 ${
-                    activeStep >= step
-                      ? "bg-blue"
-                      : "bg-white border-2 border-gray-200"
-                  }`}
-                >
-                  {activeStep >= step ? (
+                {step === 0 ? (
+                  <div className="flex h-9 w-9 items-center justify-center border rounded-full border-gray-400">
                     <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
                       <path
                         d="M3 6.5l2.5 2.5 4.5-4.5"
-                        stroke="white"
+                        stroke="gray"
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       />
                     </svg>
-                  ) : (
-                    <div className="h-1.5 w-1.5 rounded-full bg-gray-400" />
-                  )}
-                </div>
+                  </div>
+                ) : (
+                  <div className="flex h-9 w-9 items-center justify-center">
+                    {/* <div className="h-2.5 w-2.5 rounded-full bg-gray-900" /> */}
+                  </div>
+                )}
               </div>
 
               {/* Text left side */}
               {side === "left" && (
                 <>
-                  <div className="w-1/2 pr-8 text-right">
+                  <div className="w-1/2 pr-8 text-left">
                     <h3
                       className={`font-bold transition-colors duration-300 ${activeStep === step ? "text-navy" : "text-navy/30"}`}
                     >
                       {title}
                     </h3>
-                    <p className="text-xs text-gray-400 mt-1 leading-relaxed">
-                      {desc}
-                    </p>
+                    <p className=" text-muted_foreground mt-1">{desc}</p>
                   </div>
                   <div className="w-1/2 pl-8 flex justify-start">
                     <Image
@@ -317,13 +311,12 @@ export default function HowItWorks() {
                   </div>
                   <div className="w-1/2 pl-8 text-left">
                     <h3
-                      className={`font-bold transition-colors duration-300 ${activeStep === step ? "text-navy" : "text-navy/30"}`}
+                      className={`bg-red-500  font-bold transition-colors duration-300 ${activeStep === step ? "text-navy" : "text-navy/30"}`}
                     >
                       {title}
                     </h3>
-                    <p className="text-xs text-gray-400 mt-1 leading-relaxed">
-                      {desc}
-                    </p>
+
+                    <p className=" text-muted_foreground mt-1">{desc}</p>
                   </div>
                 </>
               )}

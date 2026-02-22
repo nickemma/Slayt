@@ -42,11 +42,15 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, [goToNext]);
 
-  const smallImages = images.filter((_, i) => i !== activeIndex);
+  // const smallImages = images.filter((_, i) => i !== activeIndex);
+  const smallImages = Array?.from({ length: images.length - 1 }, (_, i) => {
+    const index = (activeIndex + 1 + i) % images.length;
+    return { ...images[index], originalIndex: index };
+  });
 
   return (
-    <section className="relative overflow-hidden bg-background px-6 pb-16 pt-12 md:pt-20 md:pb-24 border border-b-1">
-      <div className="pointer-events-none absolute -right-32 top-20 h-96 w-96 rounded-full bg-light-teal/50 blur-3xl" />
+    <section className="relative overflow-hidden px-6 pb-16 pt-12 md:pt-20 md:pb-24 border border-b-1">
+      <div className="pointer-events-none absolute -right-32 top-20 h-96 w-96 rounded-full " />
 
       <div className="mx-auto max-w-6xl">
         <div className="text-center">
@@ -178,7 +182,7 @@ export default function Hero() {
                   />
                   <div
                     className="absolute inset-0"
-                    style={{ backgroundColor: "#475963", opacity: 0.45 }}
+                    style={{ backgroundColor: "#001F30", opacity: 0.45 }}
                   />
                 </motion.div>
               );

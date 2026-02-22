@@ -46,8 +46,8 @@ export default function FAQ() {
           }
         />
 
-        <div className="mt-14 space-y-0">
-          <h2 className="mb-4 font-bold text-navy">Most important question</h2>
+        <div className="mt-10 space-y-0">
+          <h3 className="mb-4 font-bold text-navy">Most important question</h3>
           {faqs.map((faq, i) => (
             <div key={faq.question}>
               <button
