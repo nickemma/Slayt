@@ -20,7 +20,13 @@ export default function TaskHero() {
             Slayt turns everyday responsibilities into lasting independence.
           </p>
           <div className="mt-4 flex flex-wrap items-center gap-4">
-            <button className="flex items-center gap-2 rounded-[0.5rem] bg-blue px-6 py-3 text-sm font-semibold text-background shadow-lg transition-transform hover:scale-105">
+            <button
+              onClick={() => {
+                const footer = document.getElementById("footer");
+                footer?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="flex items-center gap-2 rounded-[0.5rem] bg-blue px-6 py-3 text-sm font-semibold text-background shadow-lg transition-transform hover:scale-105"
+            >
               Start Free <ArrowRight size={16} />
             </button>
             <button className="flex items-center gap-2 rounded-[0.5rem] border border-blue px-6 py-3 text-sm font-semibold text-blue shadow-lg transition-transform hover:scale-105">

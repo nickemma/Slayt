@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import Logo from "@/images/logo.png";
 import { MapPin, Mail, Phone } from "lucide-react";
@@ -28,32 +27,13 @@ const support = [
   { label: "Privacy Policy", href: "/privacy" },
 ];
 
-function useDeviceOS() {
-  const [os, setOs] = useState<"ios" | "android" | "other">("other");
-
-  useEffect(() => {
-    const ua = navigator.userAgent;
-    if (/iphone|ipad|ipod/i.test(ua)) {
-      setOs("ios");
-    } else if (/android/i.test(ua)) {
-      setOs("android");
-    } else {
-      setOs("other");
-    }
-  }, []);
-
-  return os;
-}
-
 export default function Footer() {
-  const os = useDeviceOS();
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <footer className="border-t border-border">
+    <footer className="border-t border-border" id="footer">
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid gap-10 md:grid-cols-4">
           {/* Brand */}
@@ -69,34 +49,26 @@ export default function Footer() {
               Join the 500+ families who signed up today
             </p>
             <div className="flex gap-3">
-              {os !== "android" && (
-                <a
-                  href={APP_STORE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src={Apple}
-                    alt="Download on the App Store"
-                    priority
-                    className="w-[130px] h-[40px]"
-                  />
-                </a>
-              )}
-              {os !== "ios" && (
-                <a
-                  href={PLAY_STORE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src={Google}
-                    alt="Get it on Google Play"
-                    priority
-                    className="w-[130px] h-[40px]"
-                  />
-                </a>
-              )}
+              <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+                <Image
+                  src={Apple}
+                  alt="Download on the App Store"
+                  priority
+                  className="w-[130px] h-[40px]"
+                />
+              </a>
+              <a
+                href={PLAY_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={Google}
+                  alt="Get it on Google Play"
+                  priority
+                  className="w-[130px] h-[40px]"
+                />
+              </a>
             </div>
           </div>
 

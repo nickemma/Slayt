@@ -20,7 +20,13 @@ export default function AboutHero() {
             {"Because parenting shouldn\u2019t feel like a daily argument"}
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <button className="flex items-center gap-2 rounded-[0.5rem] bg-blue px-6 py-3 text-sm font-semibold text-background shadow-lg transition-transform hover:scale-105">
+            <button
+              onClick={() => {
+                const footer = document.getElementById("footer");
+                footer?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="flex items-center gap-2 rounded-[0.5rem] bg-blue px-6 py-3 text-sm font-semibold text-background shadow-lg transition-transform hover:scale-105"
+            >
               Start Free <ArrowRight size={16} />
             </button>
             <button className="flex items-center gap-2 text-sm font-semibold text-navy hover:text-teal transition-colors">

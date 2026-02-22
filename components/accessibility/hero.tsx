@@ -1,9 +1,12 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 export default function AccessibilityHero() {
+  const router = useRouter();
+
   return (
     <section className="px-6 py-20 md:py-24 border-b ">
       <div className="mx-auto max-w-6xl">
@@ -21,10 +24,19 @@ export default function AccessibilityHero() {
             children
           </p>
           <div className="mt-4 flex flex-wrap items-center gap-4">
-            <button className="flex items-center gap-2 rounded-[0.5rem] bg-blue px-6 py-3 text-sm font-semibold text-background shadow-lg transition-transform hover:scale-105">
+            <button
+              onClick={() => {
+                const footer = document.getElementById("footer");
+                footer?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="flex items-center gap-2 rounded-[0.5rem] bg-blue px-6 py-3 text-sm font-semibold text-background shadow-lg transition-transform hover:scale-105"
+            >
               Start Free <ArrowRight size={16} />
             </button>
-            <button className="flex items-center gap-2 rounded-[0.5rem] border border-blue px-6 py-3 text-sm font-semibold text-blue shadow-lg transition-transform hover:scale-105">
+            <button
+              onClick={() => router.push("/features")}
+              className="flex items-center gap-2 rounded-[0.5rem] border border-blue px-6 py-3 text-sm font-semibold text-blue shadow-lg transition-transform hover:scale-105"
+            >
               See Features
             </button>
           </div>

@@ -20,7 +20,13 @@ export default function FaqHero() {
             We've answered the most common ones below
           </p>
           <div className="mt-8">
-            <button className="flex items-center gap-2 rounded-[0.5rem] bg-blue px-6 py-3 text-sm font-semibold text-background shadow-lg transition-transform hover:scale-105">
+            <button
+              onClick={() => {
+                const footer = document.getElementById("footer");
+                footer?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="flex items-center gap-2 rounded-[0.5rem] bg-blue px-6 py-3 text-sm font-semibold text-background shadow-lg transition-transform hover:scale-105"
+            >
               Start Free <ArrowRight size={16} />
             </button>
             <p className="mt-3 text-muted_foreground">
