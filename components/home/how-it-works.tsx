@@ -279,7 +279,7 @@ export default function HowItWorks() {
                 <>
                   <div className="w-1/2 pr-8 text-left">
                     <h3
-                      className={`font-bold transition-colors duration-300 ${activeStep === step ? "text-navy" : "text-navy/30"}`}
+                      className={`text-[1.25rem] font-bold transition-colors duration-300 ${activeStep === step ? "text-navy" : "text-navy/30"}`}
                     >
                       {title}
                     </h3>
@@ -311,7 +311,7 @@ export default function HowItWorks() {
                   </div>
                   <div className="w-1/2 pl-8 text-left">
                     <h3
-                      className={`bg-red-500  font-bold transition-colors duration-300 ${activeStep === step ? "text-navy" : "text-navy/30"}`}
+                      className={`font-bold transition-colors duration-300 ${activeStep === step ? "text-navy" : "text-navy/30"}`}
                     >
                       {title}
                     </h3>
