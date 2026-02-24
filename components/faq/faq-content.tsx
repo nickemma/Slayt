@@ -31,7 +31,7 @@ export default function FAQContent() {
         />
 
         {faqData.map((section, sectionIndex) => (
-          <div key={section.title} className="mt-10 space-y-0">
+          <div key={section.title} className="mt-10 space-y-12">
             <h3 className="mb-4 font-bold text-navy">{section.title}</h3>
 
             {section.items.map((faq, itemIndex) => {

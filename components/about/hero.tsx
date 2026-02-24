@@ -29,12 +29,17 @@ export default function AboutHero() {
             >
               Start Free <ArrowRight size={16} />
             </button>
-            <button className="flex items-center gap-2 text-sm font-semibold text-navy hover:text-teal transition-colors">
+            <a
+              href="https://youtu.be/Akhl01kY3LA?si=IbVGUnXQBs_Da1HU"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-semibold text-navy hover:text-teal transition-colors"
+            >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-teal text-white">
                 <Play size={16} fill="currentColor" />
               </span>
-              See How It Works
-            </button>
+              Watch 30s Demo
+            </a>
           </div>
         </motion.div>
       </div>

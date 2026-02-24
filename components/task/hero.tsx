@@ -1,9 +1,12 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 export default function TaskHero() {
+  const router = useRouter();
+
   return (
     <section className="px-6 py-20 md:py-24">
       <div className="mx-auto max-w-[70rem]">
@@ -29,7 +32,10 @@ export default function TaskHero() {
             >
               Start Free <ArrowRight size={16} />
             </button>
-            <button className="flex items-center gap-2 rounded-[0.5rem] border border-blue px-6 py-3 text-sm font-semibold text-blue shadow-lg transition-transform hover:scale-105">
+            <button
+              onClick={() => router.push("/features")}
+              className="flex items-center gap-2 rounded-[0.5rem] border border-blue px-6 py-3 text-sm font-semibold text-blue shadow-lg transition-transform hover:scale-105"
+            >
               See Features
             </button>
           </div>

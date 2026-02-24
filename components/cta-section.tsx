@@ -24,7 +24,13 @@ export default function CTASection({
       >
         <h2 className="font-bold text-navy">{heading}</h2>
         <p className="mt-4 font-medium text-navy/80">{subtitle}</p>
-        <button className="mt-4 rounded-[0.5rem] bg-background px-10 py-3 text-sm font-semibold text-navy shadow-lg transition-transform hover:scale-105">
+        <button
+          onClick={() => {
+            const footer = document.getElementById("footer");
+            footer?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="mt-4 rounded-[0.5rem] bg-background px-10 py-3 text-sm font-semibold text-navy shadow-lg transition-transform hover:scale-105"
+        >
           Start Free
         </button>
         <p className="mt-4 text-navy/70 font-medium">{note}</p>

@@ -11,6 +11,7 @@ import kid2 from "@/images/kid-chores-2.png";
 import kid3 from "@/images/kid-chores-3.png";
 
 import Vector from "@/images/Vector.png";
+import { BouncingText } from "../word-animate";
 
 const images = [
   {
@@ -62,7 +63,8 @@ export default function Hero() {
           >
             Stop arguing about chores. <br className="hidden md:block" />
             Start raising{" "}
-            <span className="font-smooch text-blue">responsible kids</span>{" "}
+            {/* <span className="font-smooch text-blue">responsible kids</span>{" "} */}
+            <BouncingText text="responsible kids" />
             &mdash; without reminders.
           </motion.h1>
 
@@ -91,12 +93,17 @@ export default function Hero() {
             >
               Start Free <ArrowRight size={16} />
             </button>
-            <button className="flex items-center gap-2 text-sm font-semibold text-navy hover:text-teal transition-colors">
+            <a
+              href="https://youtu.be/Akhl01kY3LA?si=IbVGUnXQBs_Da1HU"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-semibold text-navy hover:text-teal transition-colors"
+            >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-teal text-white">
                 <Play size={16} fill="currentColor" />
               </span>
               Watch 30s Demo
-            </button>
+            </a>
           </motion.div>
 
           <motion.div
