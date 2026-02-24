@@ -188,12 +188,12 @@ export default function TermsContent() {
         {/* Effective dates */}
         <div className="mb-10 space-y-1 text-sm text-muted_foreground">
           <p>
-            <span className="font-semibold text-navy">Effective Date:</span>{" "}
-            [Insert Date]
+            <span className="font-semibold text-navy">Effective Date:</span> May
+            1, 2025
           </p>
           <p>
             <span className="font-semibold text-navy">Last Updated:</span>{" "}
-            [Insert Date]
+            February 20, 2026
           </p>
         </div>
 
