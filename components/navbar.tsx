@@ -5,16 +5,16 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, BookOpen } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Logo from "@/images/logo.png";
-import Blog from "@/images/blog-post.gif";
+// import Blog from "@/images/blog-post.gif";
 
 const navLinks = [
     { href: "/features", label: "Features" },
     { href: "/about", label: "About" },
     { href: "/pricing", label: "Pricing" },
     { href: "/contact", label: "Contact" },
-    { href: "/blog", gif: Blog, label: "Blog" },
+    { href: "/blog", label: "Blog" },
 ];
 
 export default function Navbar() {
@@ -40,18 +40,7 @@ export default function Navbar() {
                                         : "text-navy"
                                 }`}
                             >
-                                {link.gif ? (
-                                    <div className="relative">
-                                        <Image
-                                            src={link.gif}
-                                            alt="blog icon"
-                                            width={40}
-                                            height={40}
-                                        />
-                                    </div>
-                                ) : (
-                                    link.label
-                                )}
+                                {link.label}
                             </Link>
                         </li>
                     ))}

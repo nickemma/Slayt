@@ -24,6 +24,7 @@ import Blog5 from "@/images/blog5.avif";
 import Blog6 from "@/images/blog6.avif";
 import Blog7 from "@/images/blog7.avif";
 import Blog8 from "@/images/blog8.avif";
+import NewsletterForm from "@/components/NEWSLETTER/newsletter";
 
 const posts = [
     {
@@ -43,7 +44,7 @@ const posts = [
         date: "April 18, 2026",
         readTime: "4 min",
         image: Blog2,
-        author: "Sarah Chen",
+        author: "Karim Benzema",
         authorImage: Author2,
     },
     {
@@ -405,22 +406,9 @@ export default function BlogPage() {
             <style>{`
                 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap');
             `}</style>
-
             <Navbar />
-
             {/* HERO */}
             <section className="relative overflow-hidden px-6 pt-24 pb-16">
-                {/* Subtle grid bg */}
-                <div
-                    className="absolute inset-0 pointer-events-none"
-                    style={{
-                        backgroundImage:
-                            "radial-gradient(circle at 1px 1px, #d4d0e8 1px, transparent 0)",
-                        backgroundSize: "40px 40px",
-                        opacity: 0.4,
-                    }}
-                />
-
                 <div className="relative mx-auto max-w-6xl">
                     <motion.div
                         initial={{ opacity: 0, y: -10 }}
@@ -502,14 +490,12 @@ export default function BlogPage() {
                     </motion.div>
                 </div>
             </section>
-
             {/* FEATURED */}
             <section className="px-6 py-8">
                 <div className="mx-auto max-w-6xl">
                     <FeaturedPost post={featured} />
                 </div>
             </section>
-
             {/* FILTER + GRID */}
             <section className="px-6 py-12 pb-24">
                 <div className="mx-auto max-w-6xl">
@@ -574,6 +560,115 @@ export default function BlogPage() {
                     </AnimatePresence>
                 </div>
             </section>
+            {/* NEWSLETTER SECTION */}
+
+            <section className="px-6 py-20 relative overflow-hidden">
+                <div className="mx-auto max-w-6xl">
+                    <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            duration: 0.8,
+                            ease: [0.25, 0.46, 0.45, 0.94],
+                        }}
+                        className="group relative overflow-hidden rounded-3xl bg-[#1a1a2e] p-12 md:p-16 shadow-2xl"
+                    >
+                        {/* Animated background orbs */}
+                        <motion.div
+                            animate={{
+                                y: [0, -20, 0],
+                                x: [0, 10, 0],
+                            }}
+                            transition={{
+                                duration: 8,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                            }}
+                            className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-[#4f46e5]/20 blur-3xl pointer-events-none"
+                        />
+
+                        <motion.div
+                            animate={{
+                                scale: [1, 1.15, 1],
+                                opacity: [0.15, 0.25, 0.15],
+                            }}
+                            transition={{
+                                duration: 5,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                            }}
+                            className="absolute bottom-0 left-1/3 w-60 h-60 rounded-full bg-[#a78bfa]/20 blur-3xl pointer-events-none"
+                        />
+
+                        {/* subtle gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent pointer-events-none" />
+
+                        <div className="relative z-10 text-center">
+                            {/* Badge */}
+                            <motion.div
+                                initial={{ opacity: 0, y: -10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.2 }}
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/10 text-white/80 text-xs font-semibold mb-8"
+                            >
+                                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                                Newsletter Access
+                            </motion.div>
+
+                            {/* Heading */}
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.3, duration: 0.7 }}
+                                className="text-4xl md:text-6xl font-black text-white leading-tight mb-6"
+                                style={{
+                                    fontFamily:
+                                        "'Playfair Display', Georgia, serif",
+                                }}
+                            >
+                                WANT SLAYT UPDATES?
+                            </motion.h2>
+
+                            {/* Description */}
+                            <motion.p
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ delay: 0.5 }}
+                                className="text-muted_foreground text-lg leading-relaxed max-w-2xl mx-auto mb-10"
+                            >
+                                Subscribe to the Slayt newsletter and be the
+                                first to hear about new features, updates, and
+                                improvements
+                                <span className="text-muted_foreground text-2xl ml-2">
+                                    ⚡
+                                </span>
+                            </motion.p>
+
+                            {/* FORM */}
+                            <NewsletterForm />
+
+                            {/* Footer text */}
+                            <motion.p
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ delay: 0.8 }}
+                                className="mt-6 text-sm text-muted_foreground"
+                            >
+                                You can unsubscribe at any time. Learn more
+                                about our{" "}
+                                <Link
+                                    href="/privacy"
+                                    className="text-teal cursor-pointer hover:underline transition-all"
+                                >
+                                    Privacy Policy
+                                </Link>
+                            </motion.p>
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
+            {/* NEWSLETTER SECTION */}
 
             <Footer />
         </main>

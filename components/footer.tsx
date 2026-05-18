@@ -145,7 +145,7 @@ export default function Footer() {
                                     size={16}
                                     className="shrink-0 text-muted_foreground"
                                 />
-                                <span>info@slayt.co</span>
+                                <span>Support.slayt@earlybirdcrystals.com</span>
                             </li>
                         </ul>
                     </div>
