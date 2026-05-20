@@ -11,7 +11,7 @@ const smooch = Smooch({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://slayt.app"),
+    metadataBase: new URL("https://theslayt.com"),
 
     title: {
         default: "Family Chore App | SLAYT Turns Chores into Adventures",
