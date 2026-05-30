@@ -6,8 +6,15 @@ import { getPost, getPosts } from "@/lib/posts";
 import ArticleView from "./article-view";
 
 export async function generateStaticParams() {
-    const posts = await getPosts();
-    return posts.map((p) => ({ slug: p.slug }));
+    try {
+        const posts = await getPosts();
+        return posts.map((p) => ({ slug: p.slug }));
+    } catch (err) {
+        // Don't fail the whole build if the CMS is unreachable or env vars are
+        // missing — pages are still rendered on-demand at request time.
+        console.error("generateStaticParams: failed to prefetch slugs", err);
+        return [];
+    }
 }
 
 export async function generateMetadata({
