@@ -28,6 +28,7 @@ export const metadata: Metadata = {
         "chore tracker",
         "reward system for kids",
         "parenting app",
+        "habit building for families",
     ],
 
     authors: [{ name: "SLAYT" }],
@@ -45,10 +46,7 @@ export const metadata: Metadata = {
 
     openGraph: {
         type: "website",
-        url: "https://slayt.app",
-        title: "Family Chore App | SLAYT Turns Chores into Adventures",
-        description:
-            "Assign tasks, track progress in real time, reward kids, and turn daily chores into meaningful habits.",
+        url: "https://theslayt.com",
         siteName: "SLAYT",
         images: [
             {
@@ -62,9 +60,6 @@ export const metadata: Metadata = {
 
     twitter: {
         card: "summary_large_image",
-        title: "Family Chore App | SLAYT",
-        description:
-            "Turn chores into habits kids actually follow. Assign tasks, reward progress, and build responsibility.",
         images: ["/og-image.png"],
     },
 };

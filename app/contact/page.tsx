@@ -1,10 +1,28 @@
-"use client";
+import { Metadata } from "next";
 
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { motion } from "framer-motion";
 import CTASection from "@/components/cta-section";
 import ContactForm from "@/components/contact/contact-form";
+
+export const metadata: Metadata = {
+    title: "Contact Us | SLAYT Family Chore App",
+    description:
+        "Have questions about SLAYT? Need support or want to share feedback? Our team is ready to help you and your family.",
+    keywords: [
+        "contact slayt",
+        "slayt support",
+        "family chore app help",
+        "reach slayt team",
+        "customer service",
+    ],
+    openGraph: {
+        title: "Contact Us | SLAYT",
+        description: "Get in touch with the SLAYT team.",
+        url: "https://theslayt.com/contact",
+    },
+};
 
 export default function ContactPage() {
     return (
