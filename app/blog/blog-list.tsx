@@ -244,7 +244,7 @@ function FeaturedPost({ posts }: { posts: PostListItem[] }) {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3, duration: 0.7 }}
-                        className="text-3xl md:text-5xl font-black text-white leading-tight max-w-2xl group-hover:text-teal transition-colors duration-500"
+                        className="text-3xl md:text-5xl font-black text-white leading-tight max-w-2xl group-hover:text-blue transition-colors duration-500"
                         style={{
                             fontFamily: "'Playfair Display', Georgia, serif",
                         }}
@@ -266,7 +266,7 @@ function FeaturedPost({ posts }: { posts: PostListItem[] }) {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.7 }}
-                        className="mt-8 inline-flex items-center gap-3 bg-white text-[#1a1a2e] font-bold text-sm px-6 py-3 rounded-full group-hover:bg-teal transition-colors duration-300"
+                        className="mt-8 inline-flex items-center gap-3 bg-white text-[#1a1a2e] font-bold text-sm px-6 py-3 rounded-full group-hover:bg-blue transition-colors duration-300"
                     >
                         Read full story
                         <motion.span
@@ -560,7 +560,7 @@ export default function BlogList({ posts }: { posts: PostListItem[] }) {
                                 about our{" "}
                                 <Link
                                     href="/privacy"
-                                    className="text-teal cursor-pointer hover:underline transition-all"
+                                    className="text-blue cursor-pointer hover:underline transition-all"
                                 >
                                     Privacy Policy
                                 </Link>

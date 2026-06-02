@@ -319,7 +319,7 @@ export default function ArticleView({ post }: { post: PostDetail }) {
                             <div>
                                 <h2 className="text-3xl md:text-4xl font-black text-white leading-tight max-w-md">
                                     Ready to turn chores into{" "}
-                                    <span className="text-teal">
+                                    <span className="text-blue">
                                         adventures?
                                     </span>
                                 </h2>
@@ -334,7 +334,7 @@ export default function ArticleView({ post }: { post: PostDetail }) {
                                     <motion.span
                                         whileHover={{ scale: 1.04 }}
                                         whileTap={{ scale: 0.97 }}
-                                        className="inline-flex items-center gap-2 bg-teal text-navy font-bold text-sm px-6 py-3 rounded-full"
+                                        className="inline-flex items-center gap-2 bg-blue text-white font-bold text-sm px-6 py-3 rounded-full"
                                     >
                                         Start free trial
                                     </motion.span>
